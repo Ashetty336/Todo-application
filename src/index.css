@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #202124;
+  color: #374151;
 }
 
 h1,
@@ -18,9 +18,9 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 14px;
-  background: #eff6ff;
-  gap: 14px;
+  padding: 24px;
+  background: #f8fafc;
+  gap: 24px;
 }
 
 header {
@@ -33,52 +33,67 @@ header,
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  gap: 14px;
+  gap: 16px;
 }
 
 header input {
   flex: 1;
-  border-radius: 14px;
+  border-radius: 12px;
   outline: none;
   width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+header input:focus {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header button {
-  border-radius: 14px;
-  background: transparent;
-  transition-duration: 200ms;
+  border-radius: 12px;
+  background: #3b82f6;
+  color: white;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
 header button:hover {
-  opacity: 0.7;
+  background: #2563eb;
+  transform: translateY(-1px);
 }
 
 header button,
 header input {
-  padding: 14px 18px;
+  padding: 16px 24px;
   border: none;
   outline: none;
-  background: white;
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 0.95em;
+  line-height: 1.5;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .todoItem {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px;
-  border-radius: 14px;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
   background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.todoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .todoItem p {
@@ -88,27 +103,27 @@ p {
 .actionsContainer {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .actionsContainer button {
-  transition-duration: 200ms;
+  transition: all 0.2s ease;
   border: none;
   background: transparent;
   cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .actionsContainer button:hover {
-  opacity: 0.7;
+  background: #f1f5f9;
+  transform: scale(1.1);
 }
 
-
-
 @media (min-width: 640px) {
-
   header button,
   header input {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   p {
